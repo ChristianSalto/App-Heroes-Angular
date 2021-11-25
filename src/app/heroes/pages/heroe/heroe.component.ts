@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Heroe } from '../../interfaces/heroes.interface';
 import { HeroesService } from '../../services/heroes.service';
@@ -7,14 +7,19 @@ import { HeroesService } from '../../services/heroes.service';
 @Component({
   selector: 'app-heroe',
   templateUrl: './heroe.component.html',
-  styles: [],
+  styles: [
+    `
+
+    `,
+  ],
 })
 export class HeroeComponent implements OnInit {
-  heroe: any = {};
+  heroe!: Heroe;
 
   constructor(
     private rutaActiva: ActivatedRoute,
-    private heroesService: HeroesService
+    private heroesService: HeroesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -26,7 +31,11 @@ export class HeroeComponent implements OnInit {
       )
       .subscribe((res) => {
         console.log(res);
-        this.heroe = res
+        this.heroe = res;
       });
+  }
+
+  regresar() {
+    this.router.navigate(['/heroes/listado'])
   }
 }

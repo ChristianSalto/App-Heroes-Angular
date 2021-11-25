@@ -5,8 +5,13 @@
 </mat-grid-list>
 
 <ng-template #divHeroe>
-  <div fxLayout="row" fxLayoutAlign="space-around" fxLayout.xs="column">
-    <div>
+  <div
+    fxLayout="row"
+    fxLayoutAlign="space-around"
+    fxLayout.xs="column"
+    fxLayoutGap="20px"
+  >
+    <div fxFlex="50%" class="container-img">
       <h1>
         {{ heroe.superhero }} <small> - {{ heroe.alter_ego }}</small>
       </h1>
@@ -14,15 +19,22 @@
       <br />
       <img [src]="heroe | imagen" />
     </div>
-    <div>
+    <div fxFlex="50%" class="container-img">
       <h1>{{ heroe.publisher }}</h1>
       <mat-divider></mat-divider>
-      <mat-list>
-        <mat-list-item>{{ heroe.first_appearance }}</mat-list-item>
-        <mat-list-item>{{ heroe.characters }}</mat-list-item>
-        <mat-list-item>{{ heroe.publisher }}</mat-list-item>
-        <mat-list-item>{{ heroe.alter_ego }}</mat-list-item>
-      </mat-list>
+      <br />
+      <mat-card class="card-features">
+        <mat-list>
+          <mat-list-item>{{ heroe.first_appearance }}</mat-list-item>
+          <mat-list-item>{{ heroe.characters }}</mat-list-item>
+          <mat-list-item>{{ heroe.publisher }}</mat-list-item>
+          <mat-list-item>{{ heroe.alter_ego }}</mat-list-item>
+        </mat-list>
+
+        <mat-card-actions>
+          <button mat-button color="warn" (click)="regresar()">Regresar</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
 </ng-template>

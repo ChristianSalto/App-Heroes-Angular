@@ -1,0 +1,10 @@
+.card-features {
+  border-radius: 50px;
+  background: #303030;
+  box-shadow: 5px 5px 0px #2a2a2a, -5px -5px 0px #363636 !important;
+  height: 80%;
+  margin: 0 50px;
+  .mat-list{
+    height: inherit;
+  }
+}
