@@ -25,10 +25,26 @@
       <br />
       <mat-card class="card-features">
         <mat-list>
-          <mat-list-item>{{ heroe.first_appearance }}</mat-list-item>
-          <mat-list-item>{{ heroe.characters }}</mat-list-item>
-          <mat-list-item>{{ heroe.publisher }}</mat-list-item>
-          <mat-list-item>{{ heroe.alter_ego }}</mat-list-item>
+          <mat-list-item class="card-features__list--item">
+            <i class="material-icons">offline_bolt</i>
+            <mat-label>{{ heroe.superhero }}</mat-label>
+          </mat-list-item>
+
+          <mat-list-item class="card-features__list--item">
+            <i class="material-icons">menu_book</i>
+            <mat-label>{{ heroe.publisher }}</mat-label>
+          </mat-list-item>
+
+          <mat-list-item class="card-features__list--item">
+            <i class="material-icons">face</i>
+            <mat-label>{{ heroe.alter_ego }}</mat-label>
+          </mat-list-item>
+
+          <mat-list-item class="card-features__list--item">
+            <i class="material-icons">flash_on</i>
+            <mat-label>{{ heroe.power }}</mat-label>
+          </mat-list-item>
+
         </mat-list>
 
         <mat-card-actions>
@@ -38,3 +54,5 @@
     </div>
   </div>
 </ng-template>
+
+

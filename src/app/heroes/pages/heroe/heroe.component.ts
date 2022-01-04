@@ -14,7 +14,7 @@ import { HeroesService } from '../../services/heroes.service';
   ],
 })
 export class HeroeComponent implements OnInit {
-  heroe!: Heroe;
+  heroe!: any;
 
   constructor(
     private rutaActiva: ActivatedRoute,
@@ -30,7 +30,6 @@ export class HeroeComponent implements OnInit {
         })
       )
       .subscribe((res) => {
-        console.log(res);
         this.heroe = res;
       });
   }
