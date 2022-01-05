@@ -189,13 +189,23 @@
     },
     {
       "superhero": "Aquaman",
-      "alter_ego": "",
-      "characters": "",
-      "first_appearance": "",
-      "publisher": "Dc Comics",
-      "alt_img": "",
-      "power": "",
-      "id": "7zbtdBq"
+      "alter_ego": "Arthur Curry",
+      "characters": "Arthur Curry",
+      "first_appearance": "More Fun Comics",
+      "publisher": "DC Comics",
+      "alt_img": "http://pm1.narvii.com/6178/c23e72547318b0595bade0f2fcefa07cfa1badd9_00.jpg",
+      "power": "100",
+      "id": "h7B1oJ5"
+    },
+    {
+      "superhero": "Doctor Strange",
+      "alter_ego": "Dr. Stephen",
+      "characters": "Dr. Stephen",
+      "first_appearance": "EL ORIGEN DEL DOCTOR EXTRAÑO",
+      "publisher": "Marvel Comics",
+      "alt_img": "https://i.pinimg.com/originals/36/10/42/3610425981e70534da5bc43dfc31058d.jpg",
+      "power": "100",
+      "id": "LAL57JG"
     }
   ]
 }

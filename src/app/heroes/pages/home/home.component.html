@@ -8,11 +8,9 @@
     </mat-toolbar>
 
     <mat-nav-list>
-
       <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
         <mat-icon mat-list-icon>list_alt</mat-icon>
         <span>Listado de Heroes</span>
-
       </a>
 
       <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
@@ -24,9 +22,7 @@
         <mat-icon mat-list-icon>search</mat-icon>
         <span>Buscar Heore</span>
       </a>
-
     </mat-nav-list>
-
   </mat-sidenav>
 
   <mat-toolbar class="mat-space-between">
@@ -34,13 +30,13 @@
       <mat-icon>menu</mat-icon>
     </button>
 
-    <button mat-button>Logout</button>
+    <div>
+      <span>{{ auth.usuario }}</span>
+      <button mat-button (click)="handleOnLogout()">Logout</button>
+    </div>
   </mat-toolbar>
-
 
   <div class="container">
     <router-outlet></router-outlet>
   </div>
-
-
 </mat-sidenav-container>

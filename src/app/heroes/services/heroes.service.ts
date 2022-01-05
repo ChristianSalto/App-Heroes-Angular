@@ -14,8 +14,6 @@ export class HeroesService {
 
   constructor(private http: HttpClient) {}
 
-
-
   getHeroes(): Observable<Heroe[]> {
     return this.http.get<Heroe[]>(`${this.baseURL}/heroes`);
   }
@@ -35,6 +33,10 @@ export class HeroesService {
   }
 
   putHeroe(heroe: Heroe): Observable<Heroe> {
-    return this.http.post<Heroe>(`${this.baseURL}/heroes/${heroe.id}`, heroe);
+    return this.http.put<Heroe>(`${this.baseURL}/heroes/${heroe.id}`, heroe);
+  }
+
+  deleteHeroe(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.baseURL}/heroes/${id}`);
   }
 }
